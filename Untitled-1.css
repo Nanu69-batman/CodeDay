@@ -1,0 +1,193 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #333;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffddc1;
+}
+
+/* Full-page scroll container */
+.scroll-container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-top: 70px; /* Account for the navbar */
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: relative; /* For positioning cute elements */
+}
+
+#intro {
+    background-color: #e6f7ff;
+}
+
+#learning {
+    background-color: #d0f0c0;
+}
+
+#campus {
+    background-color: #fff4e6;
+}
+
+#reflection {
+    background-color: #f7e6ff;
+}
+
+#testimonial {
+    background-color: #ffebcd;
+}
+
+footer {
+    background-color: #f1f1f1;
+}
+
+/* Text Styles */
+h1, h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in;
+}
+
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #333;
+    margin: 30px auto;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 4em;
+    color: #333;
+    margin-top: 20px;
+    animation: popUp 1s ease-in-out;
+}
+
+/* Cute little elements */
+.heart, .star, .tree, .lightbulb, .shooting-star, .sun {
+    position: absolute;
+    font-size: 2em;
+    animation: bounce 2s infinite alternate ease-in-out;
+}
+
+.heart {
+    top: 10%;
+    left: 80%;
+}
+
+.star {
+    bottom: 15%;
+    right: 10%;
+}
+
+.tree {
+    bottom: 10%;
+    left: 5%;
+}
+
+.lightbulb {
+    top: 30%;
+    right: 20%;
+}
+
+.shooting-star {
+    bottom: 20%;
+    left: 60%;
+}
+
+.sun {
+    bottom: 10%;
+    right: 80%;
+}
+
+/* Animations */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
